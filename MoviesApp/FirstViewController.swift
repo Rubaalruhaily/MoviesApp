@@ -9,6 +9,7 @@ import UIKit
 
 class FirstViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout ,UIScrollViewDelegate {
    
+    @IBOutlet weak var HighRatedCollection: UICollectionView!
     @IBOutlet weak var PageControlTopMovies: UIPageControl!
     @IBOutlet weak var ScrollViewTopMovies: UIScrollView!
     @IBOutlet weak var DramaCollect: UICollectionView!
@@ -22,6 +23,8 @@ class FirstViewController: UIViewController , UICollectionViewDelegate , UIColle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        featchMovies()
+        
         PageControlTopMovies.numberOfPages = imagesMoVIES.count
         for index in 0..<imagesMoVIES.count {
             frame.origin.x = ScrollViewTopMovies.frame.size.width
@@ -36,10 +39,12 @@ class FirstViewController: UIViewController , UICollectionViewDelegate , UIColle
         ScrollViewTopMovies.delegate = self
         DramaCollect.delegate = self
         ComedyCollect.delegate = self
+//        HighRatedCollection.delegate = self
         
         
         DramaCollect.dataSource = self
         ComedyCollect.dataSource = self
+//        HighRatedCollection.dataSource = self
         
         //        self.view.addSubview(DramaCollect)
         //        self.view.addSubview(ComedyCollect)
@@ -59,12 +64,79 @@ class FirstViewController: UIViewController , UICollectionViewDelegate , UIColle
        
 
     }
+//    func featchMovies() {
+//        let movieURL = "https://7f51f255-70c2-4d57-a519-652683a43e1d.mock.pstmn.io/movies"
+//
+//
+//
+//      let task = URLSession.shared.dataTask(with: URL(string:movieURL)!,completionHandler: { data, response, error in
+//
+//                guard let data = data, error == nil else {
+//                    print("somthing went wrong \(error?.localizedDescription)")
+//                    print(data ?? "no data ")
+//                    return
+//                }
+//
+//          if let response = response {
+//              print(response)
+//
+//          }
+//
+//            do{
+//                // have data
+//                self.movirs = try JSONDecoder().decode([Movies].self, from: data)
+//                DispatchQueue.main.async {
+//                    self.HighRatedCollection.reloadData()
+//                }
+//
+//            }catch{
+//               print("failed to convert")
+//            }
+//
+//          print(self.movirs)
+//
+//
+//
+//        })
+//
+//        task.resume()
+//
+//
+//
+//
+//    }
+//    func fetchRateMovie(){
+//        let movieURL = "https://7f51f255-70c2-4d57-a519-652683a43e1d.mock.pstmn.io/moviesDirectors/:movie_id"
+//
+//    }
+//
+//    func collectionView(_ HighRatedCollection: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        print("SSS:\(movirs.count)")
+//        return movirs.count
+//    }
     
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let pageNumber = ScrollViewTopMovies.contentOffset.x / ScrollViewTopMovies.frame.size.width
-        PageControlTopMovies.currentPage = Int(pageNumber)
-    }
+//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+//        let pageNumber = ScrollViewTopMovies.contentOffset.x / ScrollViewTopMovies.frame.size.width
+//        PageControlTopMovies.currentPage = Int(pageNumber)
+//    }
+//    private func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        if (collectionView == HighRatedCollection )
+//
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HighRatedMoviesCell", for: indexPath) as! HighatedCollectionViewCell
+//
+//        let imagetoString = Movies[indexPath.row].moviePoster
+//        if let url = URL(string: imagetoString){
+//            if  let data = try? Data(contentsOf: url) {
+//                cell.imagTopRateed.image = UIImage(data: data)
+//            }
+//        }
+//        cell.nameOfratedmovies.text = Movies[indexPath.row].movieName
+//        cell.rateof5.text = String(Movies[indexPath.row].movieIMDBRate)
+//        cell.Durationtopmovies.text =  Movies[indexPath.row].movieDuration
+//        cell.generaofrated.text = Movies[indexPath.row].movieGenres.first
+//        return cell
+//    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.DramaCollect {
