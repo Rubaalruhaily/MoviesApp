@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		545C09E529C8A3A400EB1F21 /* UtilityFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545C09E429C8A3A400EB1F21 /* UtilityFunctions.swift */; };
+		546D547B29C9941B001FC37B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546D547A29C9941B001FC37B /* User.swift */; };
+		546D547F29C99A95001FC37B /* SignInUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546D547E29C99A95001FC37B /* SignInUser.swift */; };
 		9721863E29C1CB3200982B05 /* DramaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9721863D29C1CB3200982B05 /* DramaCollectionViewCell.swift */; };
 		9721864029C1CB4000982B05 /* ComedyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9721863F29C1CB4000982B05 /* ComedyCollectionViewCell.swift */; };
 		972DEA7229C213B400132FFE /* SecondeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972DEA7129C213B400132FFE /* SecondeViewController.swift */; };
@@ -22,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		545C09E429C8A3A400EB1F21 /* UtilityFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityFunctions.swift; sourceTree = "<group>"; };
+		546D547A29C9941B001FC37B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		546D547E29C99A95001FC37B /* SignInUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUser.swift; sourceTree = "<group>"; };
 		9721863D29C1CB3200982B05 /* DramaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramaCollectionViewCell.swift; sourceTree = "<group>"; };
 		9721863F29C1CB4000982B05 /* ComedyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComedyCollectionViewCell.swift; sourceTree = "<group>"; };
 		972DEA7129C213B400132FFE /* SecondeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondeViewController.swift; sourceTree = "<group>"; };
@@ -71,7 +77,10 @@
 				972F3A5129BF435600F25583 /* AppDelegate.swift */,
 				972F3A5329BF435600F25583 /* SceneDelegate.swift */,
 				972F3A5529BF435600F25583 /* FirstViewController.swift */,
+				545C09E429C8A3A400EB1F21 /* UtilityFunctions.swift */,
 				972DEA7129C213B400132FFE /* SecondeViewController.swift */,
+				546D547A29C9941B001FC37B /* User.swift */,
+				546D547E29C99A95001FC37B /* SignInUser.swift */,
 				972DEA7329C2147500132FFE /* ThirdViewController.swift */,
 				972DEA7529C214AF00132FFE /* FourthViewController.swift */,
 				972F3A5729BF435600F25583 /* Main.storyboard */,
@@ -161,9 +170,12 @@
 				972DEA7229C213B400132FFE /* SecondeViewController.swift in Sources */,
 				972DEA7629C214AF00132FFE /* FourthViewController.swift in Sources */,
 				972F3A5629BF435600F25583 /* FirstViewController.swift in Sources */,
+				546D547B29C9941B001FC37B /* User.swift in Sources */,
+				546D547F29C99A95001FC37B /* SignInUser.swift in Sources */,
 				9721864029C1CB4000982B05 /* ComedyCollectionViewCell.swift in Sources */,
 				972F3A5229BF435600F25583 /* AppDelegate.swift in Sources */,
 				972DEA7429C2147500132FFE /* ThirdViewController.swift in Sources */,
+				545C09E529C8A3A400EB1F21 /* UtilityFunctions.swift in Sources */,
 				972F3A5429BF435600F25583 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
